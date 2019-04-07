@@ -33,7 +33,7 @@
     describe('first', function() {
 
       it('should be able to pull out the first element of an array', function() {
-        expect(_.first([1, 2, 3])).to.equal(FILL_ME_IN);
+        expect(_.first([1, 2, 3])).to.equal(1);
       });
 
       it('should accept an index argument', function() {
@@ -43,7 +43,7 @@
       it('should return empty array if zero is passed in as the index', function() {
         // There is a very important difference between `equal` and `eql`
         // Can you discover what it is?
-        expect(_.first([1, 2, 3], 0)).to.eql(FILL_ME_IN);
+        expect(_.first([1, 2, 3], 0)).to.eql([]);
       });
 
       it('should return all the array\'s elements if the index argument is larger than the length of the array', function() {
@@ -58,7 +58,7 @@
       });
 
       it('should accept an index argument', function() {
-        expect(_.last([1, 2, 3], 2)).to.eql(FILL_ME_IN);
+        expect(_.last([1, 2, 3], 2)).to.eql([2,3]);
       });
 
       it('should return empty array if zero is passed in as the index', function() {
@@ -66,7 +66,7 @@
       });
 
       it('should return all the array\'s elements if the index argument is larger than the length of the array', function() {
-        expect(_.last([1, 2, 3], 5)).to.eql(FILL_ME_IN);
+        expect(_.last([1, 2, 3], 5)).to.eql([2,3]);
       });
     });
 
@@ -126,7 +126,7 @@
           iterations.push([letter, index]);
         });
 
-        expect(iterations).to.eql(FILL_ME_IN);
+        expect(iterations).to.eql([ [ 'a', 0 ], [ 'b', 1 ], [ 'c', 2 ] ]);
       });
 
       it('should iterate over arrays and provide access to the original collection', function() {
@@ -153,7 +153,7 @@
           iterations.push(letter);
         });
 
-        expect(iterations).to.not.include(FILL_ME_IN);
+        expect(iterations).to.not.include();
       });
 
       it('should iterate over objects and provide access to each value', function() {
